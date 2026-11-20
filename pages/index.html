@@ -3,21 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Little Baby</title>
-    <link rel="stylesheet" href="../css/style.css">
-    <script src="../js/script.js" defer></script>
+    <title>Hjem | Little Baby</title>
+    <!-- Gjenbruk portalens stil, med egne regler for forsiden. -->
+    <link rel="stylesheet" href="../css/min-side.css">
+    <link rel="stylesheet" href="../css/hjem.css">
+    <script src="../js/barn-informasjon.js" defer></script>
+    <script src="../js/hjem.js" defer></script>
+    <link rel="stylesheet" href="../css/navigasjon.css">
 </head>
 <body>
-    <header>
-        <h1>Little Baby</h1>
-    </header>
+    <div class="portal">
+        <header class="toppfelt">
+            <a class="logo" href="index.html" aria-label="Little Baby – hjem">Little Baby</a>
+            <a id="konto-lenke" class="tekstknapp" href="innlogging.html">Logg inn</a>
+        </header>
+        <main>
+            <section class="velkomst">
+                <p class="overtekst">EN LITEN STØTTE I HVERDAGEN</p>
+                <h1 id="velkomsttekst">Velkommen til Little Baby</h1>
+                <p>Små tips, felles oversikt og plass til deres hverdag som foreldre.</p>
+            </section>
 
-    <main>
-        <!-- Legg til sidens hovedinnhold her. -->
-    </main>
+            <!-- Bruker de samme barna og det samme valget som Barnets side. -->
+            <section class="kort" aria-labelledby="barn-tittel">
+                <h2 id="barn-tittel">For barnet ditt</h2>
+                <label for="velg-barn">Velg barn</label>
+                <select id="velg-barn"></select>
+                <p id="barn-oppsummering" class="hjelpetekst"></p>
+                <a class="sidelenke" href="barnets-side.html">Se barnet og legg til flere barn</a>
+            </section>
 
-    <footer>
-        <p>&copy; Little Baby</p>
-    </footer>
+            <section class="kort" id="alderstips" aria-labelledby="tips-tittel" hidden>
+                <h2 id="tips-tittel">Små tips for denne alderen</h2>
+                <p id="aldersgruppe" class="aldersmerke"></p>
+                <div id="alder-informasjon"></div>
+            </section>
+
+            <section aria-labelledby="foreldre-tittel">
+                <h2 id="foreldre-tittel">Dere som foreldre</h2>
+                <p id="foreldre-intro" class="hjelpetekst">Kladd til prototypen: Korte temaforslag som kan utvikles videre. Les mer hos kildene.</p>
+                <div id="foreldretips"></div>
+            </section>
+            <p class="hjelpetekst">Generell informasjon. Helsestasjonen eller fastlegen kan gi råd tilpasset familien. Flere kilder kommer senere.</p>
+            <p id="hjem-melding" role="status"></p>
+        </main>
+        <!-- Hjem erstatter den tidligere profil-lenken. -->
+        <nav class="bunnmeny" aria-label="Hovedmeny">
+            <a href="index.html" aria-current="page">Hjem</a>
+            <a href="min-side.html">Min side</a>
+            <a href="barnets-side.html">Barnet</a>
+        </nav>
+    </div>
 </body>
 </html>

@@ -1,0 +1,83 @@
+<!-- Barnets side: felles informasjon om barnet i Little Baby. -->
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Tilpasser siden til mobil. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Barnets side | Little Baby</title>
+
+    <link rel="stylesheet" href="../css/barnets-side.css">
+    <!-- Aldersinnhold lastes før koden som viser barneprofilen. -->
+    <script src="../js/barn-informasjon.js" defer></script>
+    <script src="../js/barnets-side.js" defer></script>
+    <link rel="stylesheet" href="../css/navigasjon.css">
+</head>
+
+<body>
+    <main class="barneside">
+
+
+        <h1>Barnets side</h1>
+        <p>Legg til barna og velg hvem du vil se informasjon om.</p>
+
+        <!-- Skjema for å registrere et barn. -->
+        <section class="kort">
+            <h2>Legg til barn</h2>
+
+            <form id="barn-skjema">
+                <label for="barn-navn">Barnets navn</label>
+                <input
+                    id="barn-navn"
+                    type="text"
+                    maxlength="60"
+                    required
+                >
+
+                <label for="barn-fodt">Fødselsdato</label>
+                <input id="barn-fodt" type="date" required>
+
+                <button type="submit">Legg til barn</button>
+            </form>
+        </section>
+
+        <!-- Valg mellom barna vises her. -->
+        <section aria-labelledby="barna-tittel">
+            <h2 id="barna-tittel">Barna våre</h2>
+            <div id="barn-valg" class="barn-valg"></div>
+        </section>
+
+        <!-- Opplysninger om barnet som er valgt. -->
+        <section id="barn-profil" class="kort" hidden>
+            <h2 id="profil-navn"></h2>
+            <p id="profil-fodt"></p>
+            <p id="profil-alder"></p>
+
+            <h3>Tre tips for denne alderen</h3>
+            <p id="aldersgruppe" class="aldersmerke"></p>
+            <!-- Oppdateres automatisk når foreldrene velger et annet barn. -->
+            <div id="alder-informasjon"></div>
+            <!-- Utvid kildelisten i js/barn-informasjon.js når nye kilder er vurdert. -->
+            <p class="kildemerknad">Flere lenker til nyttige sider kommer senere.</p>
+            <p class="kildemerknad">Barn utvikler seg forskjellig.
+                Spør helsestasjonen eller fastlegen om råd tilpasset barnet.</p>
+            <p class="kildemerknad">Kildelenker kontrollert 19. november 2026.
+                Les hele rådet hos kilden for detaljer og oppdateringer.</p>
+        </section>
+
+        <!-- Bekreftelser og feilmeldinger. -->
+        <p id="melding" role="status"></p>
+
+        <noscript>
+            Aktiver JavaScript for å legge til og velge barn.
+        </noscript>
+    </main>
+    <nav class="bunnmeny" aria-label="Hovedmeny">
+        <a href="index.html">Hjem</a>
+        <a href="min-side.html">Min side</a>
+        <a href="barnets-side.html" aria-current="page">Barnet</a>
+    </nav>
+</body>
+</html>

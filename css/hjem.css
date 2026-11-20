@@ -1,0 +1,21 @@
+/* ===== FORSIDE: BARN OG KORTE TEMAKORT ===== */
+#velg-barn {
+    width: 100%;
+    min-width: 0;
+    min-height: 46px;
+    margin-bottom: 12px;
+    padding: 10px;
+    border: 1px solid #bbc5bd;
+    border-radius: 10px;
+    background: white;
+    color: #343b37;
+    font: inherit;
+}
+#velg-barn:focus-visible { outline: 3px solid #526f5a; outline-offset: 3px; }
+.aldersmerke { font-weight: bold; color: #425d49; }
+.infoblokk { padding-top: 16px; margin-top: 16px; border-top: 1px solid #e8e1da; }
+.infoblokk h4 { margin: 0 0 8px; font-size: 18px; }
+.infoblokk p { margin: 0 0 8px; }
+#foreldretips h3 { margin-bottom: 12px; }
+#foreldretips a, .infoblokk a { display: inline-block; padding: 8px 0; color: #425d49; text-underline-offset: 3px; }
+.kort { overflow-wrap: anywhere; }
