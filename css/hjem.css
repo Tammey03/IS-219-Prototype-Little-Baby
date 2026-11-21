@@ -19,3 +19,35 @@
 #foreldretips h3 { margin-bottom: 12px; }
 #foreldretips a, .infoblokk a { display: inline-block; padding: 8px 0; color: #425d49; text-underline-offset: 3px; }
 .kort { overflow-wrap: anywhere; }
+
+/* Snarveier til temaene fra Figma-prototypen. */
+.temasnarveier { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+.temasnarveier a { padding: 12px; border-radius: 12px; background: #e5f3f8; color: #34566a; text-decoration: none; }
+.temasnarveier a:hover { background: #fbd8df; }
+@media (max-width: 360px) { .temasnarveier { grid-template-columns: 1fr; } }
+
+/* Forsiden bruker to kolonner på nettbrett og PC. */
+@media (min-width: 768px) {
+    .hjem-innhold {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        align-items: start;
+        gap: 24px;
+    }
+    .hjem-innhold > .velkomst,
+    .hjem-innhold > .foreldreseksjon,
+    .hjem-innhold > .hjelpetekst,
+    #hjem-melding { grid-column: 1 / -1; }
+    .hjem-innhold > .kort { margin: 0; }
+    #alderstips { grid-column: 1 / -1; }
+    #alder-informasjon,
+    #foreldretips {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 24px;
+    }
+    #foreldretips > .kort { margin: 0; }
+}
+@media (min-width: 1100px) {
+    #alder-informasjon { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}

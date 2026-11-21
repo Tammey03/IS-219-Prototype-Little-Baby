@@ -281,3 +281,27 @@ h3 {
     font: inherit;
 }
 .delingsknapper { display: flex; flex-wrap: wrap; gap: 12px; }
+
+/* ===== NETTBRETT OG PC ===== */
+/* Samme innhold, men bredere flate og kort ved siden av hverandre. */
+@media (min-width: 768px) {
+    .portal {
+        max-width: 1200px;
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+    .toppfelt { padding: 32px 0; }
+    .velkomst { padding: 24px 0 32px; }
+    h1 { font-size: 40px; }
+    .visningsvalg { max-width: 680px; }
+    #oppretting { max-width: 680px; }
+    #samlinger {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        align-items: start;
+        gap: 24px;
+    }
+    #samlinger > .kort { margin-bottom: 0; }
+    #samlinger { margin-bottom: 24px; }
+    .kort { min-width: 0; }
+}

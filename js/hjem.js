@@ -19,14 +19,44 @@ const foreldretips = [
         lenke: "https://www.bufdir.no/foreldrehverdag/"
     },
     {
-        tittel: "Til mor", rolle: "mor", kilde: "Bufdir",
-        tekst: "Kladd: Hva trenger du av støtte og pauser? Her kommer innhold om å finne trygghet i morsrollen.",
+        tittel: "Finn trygghet i morsrollen", rolle: "mor", kilde: "Bufdir",
+        tekst: "Kladdtips: Gi deg selv tid til å bli kjent med barnet og rollen som mor. Du trenger ikke ha alle svarene. Snakk om det du synes er fint, og det som er vanskelig.",
         lenke: "https://www.bufdir.no/foreldrehverdag/a-vare-foreldre/foreldrerollen/"
     },
     {
-        tittel: "Til far", rolle: "far", kilde: "Bufdir",
-        tekst: "Kladd: Finn egne stunder med barnet og snakk sammen om oppgavene. Her kommer innhold om farsrollen.",
+        tittel: "Dine behov teller også", rolle: "mor", kilde: "Bufdir",
+        tekst: "Kladdtips: Sett ord på hva du trenger av hvile, støtte og tid til deg selv. Avtal sammen hvordan dere fordeler ansvaret, slik at du ikke må holde oversikt over alt alene.",
+        lenke: "https://www.bufdir.no/foreldrehverdag/a-vare-foreldre/samliv-og-familie/a-ga-fra-par-til-familie-vanlige-utfordringer/"
+    },
+    {
+        tittel: "Nærhet på dine premisser", rolle: "mor", kilde: "Bufdir",
+        tekst: "Kladdtips: Snakk med partneren om hva nærhet betyr for deg nå. Det kan være en god samtale, en klem eller tid sammen. Begges ønsker og grenser skal respekteres.",
+        lenke: "https://www.bufdir.no/foreldrehverdag/a-vare-foreldre/samliv-og-familie/god-kommunikasjon-i-parforholdet/"
+    },
+    {
+        tittel: "Plass til både deg og dere", rolle: "mor", kilde: "Bufdir",
+        tekst: "Kladdtips: Du er fortsatt deg selv, samtidig som du er mor og partner. Snakk om hva dere savner og vil bevare fra livet som par. Dere har begge ansvar for å finne rom for hverandre.",
+        lenke: "https://www.bufdir.no/foreldrehverdag/a-vare-foreldre/samliv-og-familie/godt-samliv/"
+    },
+    {
+        tittel: "Finn din rolle som far", rolle: "far", kilde: "Bufdir",
+        tekst: "Kladdtips: Bli kjent med barnet gjennom egne stunder med lek, prat og stell. Du trenger ikke gjøre alt på samme måte som den andre forelderen.",
         lenke: "https://www.bufdir.no/foreldrehverdag/a-vare-foreldre/foreldrerollen/"
+    },
+    {
+        tittel: "Ta ansvar i hverdagen", rolle: "far", kilde: "Bufdir",
+        tekst: "Kladdtips: Avtal hvilke oppgaver du følger opp fra start til slutt. Snakk om hvordan dere begge kan få pauser og støtte når hverdagen er travel.",
+        lenke: "https://www.bufdir.no/foreldrehverdag/a-vare-foreldre/samliv-og-familie/a-ga-fra-par-til-familie-vanlige-utfordringer/"
+    },
+    {
+        tittel: "Ta vare på parforholdet sammen", rolle: "far", kilde: "Bufdir",
+        tekst: "Kladdtips: Spør partneren hvordan dagen har vært, lytt og fortell hva du selv trenger. Finn små stunder sammen uten krav om store planer. Parforholdet er et felles ansvar.",
+        lenke: "https://www.bufdir.no/foreldrehverdag/a-vare-foreldre/samliv-og-familie/god-kommunikasjon-i-parforholdet/"
+    },
+    {
+        tittel: "Lær mer om livet som par", rolle: "far", kilde: "Bufdir",
+        tekst: "Kladdtips: Se gjerne deler av Godt samliv sammen, og bruk det som utgangspunkt for å snakke om forventninger og livet som foreldre.",
+        lenke: "https://www.bufdir.no/foreldrehverdag/a-vare-foreldre/samliv-og-familie/godt-samliv/"
     },
     {
         tittel: "Et lag i hverdagen", kilde: "Bufdir",

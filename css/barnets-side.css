@@ -135,3 +135,28 @@ button:focus-visible {
     color: #59635d;
     font-size: 14px;
 }
+
+/* PC og nettbrett: registrering og barnevalg side om side. */
+@media (min-width: 768px) {
+    .barneside {
+        max-width: 1200px;
+        padding-left: 32px;
+        padding-right: 32px;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        align-items: start;
+        gap: 24px;
+    }
+    .barneside > h1,
+    .barneside > p,
+    .barneside > noscript,
+    #barn-profil { grid-column: 1 / -1; }
+    .barneside > h1 { margin-bottom: 0; font-size: 40px; }
+    .barneside > .kort { margin: 0; }
+    .barneside > section { min-width: 0; }
+    #alder-informasjon {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 24px;
+    }
+}

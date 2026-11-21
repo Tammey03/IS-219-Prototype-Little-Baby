@@ -22,7 +22,7 @@
     min-height: 100svh;
     display: grid;
     place-items: center;
-    padding: 32px 20px calc(112px + env(safe-area-inset-bottom, 0px));
+    padding: 32px 20px;
     background: var(--bakgrunn);
     color: var(--tekst);
     font-family: Arial, Helvetica, sans-serif;

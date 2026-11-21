@@ -17,11 +17,27 @@
             <a class="logo" href="index.html" aria-label="Little Baby – hjem">Little Baby</a>
             <a id="konto-lenke" class="tekstknapp" href="innlogging.html">Logg inn</a>
         </header>
-        <main>
+        <main class="hjem-innhold">
             <section class="velkomst">
                 <p class="overtekst">EN LITEN STØTTE I HVERDAGEN</p>
                 <h1 id="velkomsttekst">Velkommen til Little Baby</h1>
                 <p>Små tips, felles oversikt og plass til deres hverdag som foreldre.</p>
+            </section>
+
+            <!-- Nye temaer fra Figma. Resten av forsiden beholdes. -->
+            <section class="kort" aria-labelledby="tema-tittel">
+                <h2 id="tema-tittel">Utforsk temaer</h2>
+                <p>Korte introduksjoner og kilder for deg som vil lese mer.
+                    Henter ingen data fra noen andre nettsider, ligger bare selvlaget eksempler.</p>
+                <div class="temasnarveier">
+                    <a href="tema.html#baby">Baby (0–12 mnd)</a>
+                    <a href="tema.html#utvikling">Utvikling &amp; helse</a>
+                    <a href="tema.html#utstyr">Utstyrguide</a>
+                    <a href="tema.html#sovn">Søvn &amp; rutiner</a>
+                    <a href="tema.html#vogn">Ute med vogn</a>
+                    <a href="tema.html#kurs">Kurs &amp; webinar</a>
+                    <a href="tema.html#nettbutikk">Nettbutikk · planlagt</a>
+                </div>
             </section>
 
             <!-- Bruker de samme barna og det samme valget som Barnets side. -->
@@ -39,7 +55,7 @@
                 <div id="alder-informasjon"></div>
             </section>
 
-            <section aria-labelledby="foreldre-tittel">
+            <section class="foreldreseksjon" aria-labelledby="foreldre-tittel">
                 <h2 id="foreldre-tittel">Dere som foreldre</h2>
                 <p id="foreldre-intro" class="hjelpetekst">Kladd til prototypen: Korte temaforslag som kan utvikles videre. Les mer hos kildene.</p>
                 <div id="foreldretips"></div>

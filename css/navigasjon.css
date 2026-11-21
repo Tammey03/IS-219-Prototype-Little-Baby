@@ -34,3 +34,24 @@
     font-weight: bold;
 }
 
+
+/* PC og nettbrett: fest hovedmenyen øverst. Mobil beholder bunnmenyen. */
+@media (min-width: 768px) {
+    .bunnmeny {
+        top: 0;
+        bottom: auto;
+        max-width: 1200px;
+        padding: calc(12px + env(safe-area-inset-top, 0px)) 12px 12px;
+        border-radius: 0 0 16px 16px;
+        box-shadow: 0 4px 18px rgb(52 59 55 / 8%);
+    }
+    .bunnmeny a { min-width: 120px; text-align: center; }
+
+    /* Plass til den faste toppmenyen på alle sider som bruker menyfilen. */
+    body { padding-top: calc(88px + env(safe-area-inset-top, 0px)); }
+    .portal,
+    .barneside { padding-bottom: 40px; }
+    .temaoppsett { padding-bottom: 40px; }
+    .temameny { top: calc(108px + env(safe-area-inset-top, 0px)); }
+    html { scroll-padding-top: calc(100px + env(safe-area-inset-top, 0px)); }
+}
