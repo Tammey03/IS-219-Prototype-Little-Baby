@@ -1,0 +1,36 @@
+/* Felles meny festet nederst i skjermen på alle portalsidene. */
+.bunnmeny {
+    box-sizing: border-box;
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 520px;
+    z-index: 100;
+    display: flex;
+    justify-content: space-around;
+    gap: 8px;
+    padding: 12px 12px calc(12px + env(safe-area-inset-bottom, 0px));
+    border: 1px solid #e8e1da;
+    border-radius: 16px 16px 0 0;
+    background: white;
+    box-shadow: 0 -4px 18px rgb(52 59 55 / 8%);
+}
+
+.bunnmeny a {
+    padding: 10px 6px;
+    color: #647068;
+    text-decoration: none;
+}
+
+.bunnmeny a:focus-visible {
+    outline: 3px solid #526f5a;
+    outline-offset: 3px;
+}
+
+.bunnmeny a[aria-current="page"] {
+    color: #343b37;
+    font-weight: bold;
+}
+

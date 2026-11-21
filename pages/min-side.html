@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+    <!-- Norske bokstaver og mobiltilpasning. -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Min side | Little Baby</title>
+
+    <!-- Egne filer for utseende og funksjonalitet. -->
+    <link rel="stylesheet" href="../css/min-side.css">
+    <script src="../js/min-side.js" defer></script>
+    <link rel="stylesheet" href="../css/navigasjon.css">
+</head>
+
+<body>
+    <!-- Skjules til JavaScript har kontrollert valgt bruker. -->
+    <div id="portal" class="portal" hidden>
+
+        <!-- Navn på portalen og utlogging. -->
+        <header class="toppfelt">
+            <a class="logo" href="index.html">Little Baby</a>
+            <button id="logg-ut" class="tekstknapp" type="button">
+                Logg ut
+            </button>
+        </header>
+
+        <main>
+            <!-- JavaScript setter inn riktig hilsen. -->
+            <section class="velkomst" aria-labelledby="hilsen">
+                <p class="overtekst">MIN SIDE</p>
+                <h1 id="hilsen"></h1>
+                <p>Her finner du dine egne oppgaver og huskelister.</p>
+            </section>
+
+            <!-- Bytt mellom egne lister, egne kalendere og mottatte delinger. -->
+            <nav class="visningsvalg" aria-label="Velg innhold">
+                <button type="button" data-visning="liste" aria-pressed="true">Mine lister</button>
+                <button type="button" data-visning="kalender" aria-pressed="false">Mine kalendere</button>
+                <button type="button" data-visning="delt" aria-pressed="false">Delt med meg</button>
+            </nav>
+
+            <section class="kort" id="oppretting" aria-labelledby="opprett-tittel">
+                <h2 id="opprett-tittel">Opprett liste</h2>
+                <p class="hjelpetekst">Nytt innhold er privat til du velger å dele det.</p>
+                <form id="opprett-skjema">
+                    <label for="nytt-navn">Navn</label>
+                    <div class="inndata-rad">
+                        <input id="nytt-navn" type="text" maxlength="80" required placeholder="For eksempel: Innkjøp til babyen">
+                        <button class="hovedknapp" type="submit">Opprett</button>
+                    </div>
+                </form>
+            </section>
+
+            <!-- JavaScript bygger kortene for den valgte visningen. -->
+            <section aria-labelledby="innhold-tittel">
+                <h2 id="innhold-tittel">Mine lister</h2>
+                <div id="samlinger"></div>
+            </section>
+            <p id="statusmelding" role="status"></p>
+            <p class="hjelpetekst">Demo: Bytt mellom mor og far i samme fane for å teste deling.</p>
+
+            <section class="kort">
+                <h2>Barnets side</h2>
+                <p>Informasjon som er nyttig for foreldrene og barnet.</p>
+                <a class="sidelenke" href="barnets-side.html">Åpne barnets side</a>
+            </section>
+        </main>
+
+        <!-- Navigasjon mellom portalens sider. -->
+        <nav class="bunnmeny" aria-label="Hovedmeny">
+            <a href="index.html">Hjem</a>
+            <a href="min-side.html" aria-current="page">Min side</a>
+            <a href="barnets-side.html">Barnet</a>
+        </nav>
+    </div>
+
+    <noscript>
+        <p>Aktiver JavaScript for å bruke prototypen.</p>
+    </noscript>
+</body>
+</html>
