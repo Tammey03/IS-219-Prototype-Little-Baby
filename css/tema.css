@@ -42,3 +42,5 @@
     .artikkeloppsett { grid-template-columns: 1fr; }
     .temakort { padding: 22px; }
 }
+
+.temabilde { display: block; width: 100%; height: auto; align-self: center; border-radius: 20px; }

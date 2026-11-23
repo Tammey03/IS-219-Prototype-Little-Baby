@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="../css/barnets-side.css">
     <!-- Aldersinnhold lastes før koden som viser barneprofilen. -->
     <script src="../js/barn-informasjon.js" defer></script>
+    <script src="../js/chatbot.js" defer></script>
     <script src="../js/barnets-side.js" defer></script>
     <link rel="stylesheet" href="../css/navigasjon.css">
 </head>
@@ -22,6 +23,7 @@
 
         <h1>Barnets side</h1>
         <p>Legg til barna og velg hvem du vil se informasjon om.</p>
+        <img class="barneillustrasjon" src="../assets/images/lek.svg" alt="Illustrasjon av et barn som leker med klosser og en ball" width="800" height="300">
 
         <!-- Skjema for å registrere et barn. -->
         <section class="kort">
@@ -65,6 +67,27 @@
                 Spør helsestasjonen eller fastlegen om råd tilpasset barnet.</p>
             <p class="kildemerknad">Kildelenker kontrollert 19. november 2026.
                 Les hele rådet hos kilden for detaljer og oppdateringer.</p>
+        </section>
+
+        <!-- Lokal chatdemo inspirert av Figma. Ingen spørsmål sendes til en AI. -->
+        <section class="kort ai-kort" aria-labelledby="ai-tittel">
+            <h2 id="ai-tittel"><span aria-hidden="true">🤖</span> LittleBaby AI</h2>
+            <p class="ai-demo">Prototype · Forhåndsskrevne svar, ingen ekte AI.</p>
+            <p id="ai-intro" class="ai-intro">Hei! Jeg kan vise deg videre til informasjon om søvn, mat og foreldrerollen. Har du et spørsmål?</p>
+            <div class="ai-forslag" aria-label="Forslag til spørsmål">
+                <button type="button" data-chattema="søvn">Søvn</button>
+                <button type="button" data-chattema="mat">Mat og amming</button>
+                <button type="button" data-chattema="foreldrerollen">Foreldrerollen</button>
+            </div>
+            <div id="ai-samtale" class="ai-samtale" role="log" aria-live="polite" aria-label="Chatsamtale"></div>
+            <form id="ai-skjema" class="ai-skjema">
+                <label for="ai-sporsmal">Spør LittleBaby AI</label>
+                <div class="ai-skrivefelt">
+                    <input id="ai-sporsmal" type="text" maxlength="300" required placeholder="Skriv et spørsmål til AI-veilederen…">
+                    <button type="submit">Send</button>
+                </div>
+            </form>
+            <button id="ai-nullstill" type="button" class="ai-nullstill">Tøm samtalen</button>
         </section>
 
         <!-- Bekreftelser og feilmeldinger. -->

@@ -92,9 +92,10 @@ function visHjemmebarn() {
             tekst = "Kladd: Her kommer innhold om måltider og gode matvaner tilpasset barnets alder.";
             lenke = "https://www.helsenorge.no/barn/";
         }
-        const kort = document.createElement("article");
-        kort.className = "kort";
-        const overskrift = document.createElement("h3");
+        // Lukkede, tastaturvennlige tips gir mindre tekst ved første besøk.
+        const kort = document.createElement("details");
+        kort.className = "foreldretips-rad";
+        const overskrift = document.createElement("summary");
         overskrift.textContent = tittel;
         const avsnitt = document.createElement("p");
         avsnitt.textContent = tekst;
@@ -116,7 +117,7 @@ try {
         ? `For deg som ${hjemmeRolle}`
         : "Dere som foreldre";
     document.querySelector("#foreldre-intro").textContent = hjemmeRolle
-        ? `Kladd til prototypen: Tips for deg som ${hjemmeRolle}, og for samarbeidet deres. Les mer hos kildene.`
+        ? `Små tips for deg som ${hjemmeRolle}. Åpne det du vil lese mer om.`
         : "Logg inn som mor eller far for å se tilpassede tips. Innholdet er foreløpig kladd.";
     if (["mor", "far"].includes(rolle)) {
         document.querySelector("#velkomsttekst").textContent = rolle === "mor" ? "Hei, mamma!" : "Hei, pappa!";
