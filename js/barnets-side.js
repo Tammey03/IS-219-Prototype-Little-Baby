@@ -135,6 +135,8 @@ function visProfil() {
 
     // Velg relevant informasjon ut fra barnets fødselsdato.
     visAldersinformasjon(barnet.fodselsdato);
+    // Chatdemoen følger valgt barn. Samtalen tømmes ved bytte av barn.
+    oppdaterChatBarn(barnet.id, barnet.navn, beregnAlder(barnet.fodselsdato));
     profil.hidden = false;
 }
 

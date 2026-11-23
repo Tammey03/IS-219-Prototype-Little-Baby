@@ -1,21 +1,47 @@
-/* ===== FORSIDE: BARN OG KORTE TEMAKORT ===== */
-#velg-barn {
-    width: 100%;
-    min-width: 0;
-    min-height: 46px;
-    margin-bottom: 12px;
-    padding: 10px;
-    border: 1px solid #bbc5bd;
-    border-radius: 10px;
-    background: white;
-    color: #343b37;
-    font: inherit;
+/* ===== ROLIG FORSIDE MED LUFT OG VALGFRIE DETALJER ===== */
+.hjem-innhold { display: grid; gap: 40px; }
+.hjem-innhold > * { min-width: 0; margin: 0; }
+.hjem-innhold .velkomst { padding: 16px 0 0; }
+.hjem-innhold .velkomst > p { max-width: 48ch; }
+.forsidebilde { display: block; width: 100%; height: auto; margin-top: 28px; border-radius: 28px; }
+.barn-oversikt { padding: 28px; border-radius: 24px; background: #e6f1eb; }
+#velg-barn { display: block; width: 100%; max-width: 440px; min-height: 48px; padding: 12px; margin-bottom: 16px; border: 1px solid #bbc5bd; border-radius: 12px; background: white; color: #343b37; font: inherit; }
+.barn-oversikt .sidelenke { display: inline-block; padding: 8px 0; }
+summary { cursor: pointer; }
+.alderstips { border-bottom: 1px solid #dcded6; padding-bottom: 24px; }
+.alderstips > summary { padding: 12px 0; font-size: 20px; font-weight: bold; }
+.tipsinnhold { padding: 24px 0 8px; }
+.aldersmerke { color: #425d49; font-weight: bold; }
+.infoblokk { padding: 20px 0; }
+.infoblokk h4 { font-size: 18px; margin: 0 0 12px; }
+.infoblokk p { max-width: 55ch; line-height: 1.7; }
+.infoblokk a, #foreldretips a { display: inline-block; padding: 10px 0; color: #425d49; text-underline-offset: 4px; }
+.temaseksjon > p { color: #59635d; margin-bottom: 24px; }
+.temabilder { display: grid; gap: 24px; }
+.temabilder a { color: #343b37; text-decoration: none; }
+.temabilder img { display: block; width: 100%; height: auto; aspect-ratio: 2.2; object-fit: cover; border-radius: 20px; transition: transform 150ms ease; }
+.temabilder a:hover img { transform: translateY(-3px); }
+.temabilder span { display: block; padding: 14px 0 4px; font-size: 18px; font-weight: bold; }
+.alle-temaer { display: inline-block; margin-top: 24px; padding: 10px 0; color: #425d49; text-underline-offset: 4px; }
+.foreldreseksjon { padding-top: 12px; }
+#foreldre-intro { font-size: 14px; margin-bottom: 24px; }
+/* Samma rolletips beholdes som åpne/lukke-rader i stedet for mange bokser. */
+#foreldretips { border-top: 1px solid #dcded6; }
+.foreldretips-rad { border-bottom: 1px solid #dcded6; padding: 6px 0; }
+.foreldretips-rad summary { padding: 18px 4px; font-weight: bold; }
+.foreldretips-rad p { max-width: 65ch; margin: 8px 4px 12px; line-height: 1.8; }
+.foreldretips-rad a { margin-left: 4px; }
+.hjem-innhold summary:focus-visible,
+#velg-barn:focus-visible { outline: 3px solid #526f5a; outline-offset: 4px; border-radius: 6px; }
+@media (min-width: 768px) {
+    .hjem-innhold { max-width: 1040px; margin: auto; gap: 56px; }
+    .hjem-innhold .velkomst { display: grid; grid-template-columns: 1fr 1fr; column-gap: 48px; align-items: center; }
+    .velkomst .overtekst { grid-column: 1; align-self: end; }
+    .velkomst h1 { grid-column: 1; }
+    .velkomst > p:not(.overtekst) { grid-column: 1; align-self: start; }
+    .velkomst .forsidebilde { grid-column: 2; grid-row: 1 / 4; margin: 0; min-height: 240px; object-fit: cover; }
+    .barn-oversikt { padding: 36px 40px; }
+    .temabilder { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px; }
+    #alder-informasjon { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px; }
 }
-#velg-barn:focus-visible { outline: 3px solid #526f5a; outline-offset: 3px; }
-.aldersmerke { font-weight: bold; color: #425d49; }
-.infoblokk { padding-top: 16px; margin-top: 16px; border-top: 1px solid #e8e1da; }
-.infoblokk h4 { margin: 0 0 8px; font-size: 18px; }
-.infoblokk p { margin: 0 0 8px; }
-#foreldretips h3 { margin-bottom: 12px; }
-#foreldretips a, .infoblokk a { display: inline-block; padding: 8px 0; color: #425d49; text-underline-offset: 3px; }
-.kort { overflow-wrap: anywhere; }
+@media (prefers-reduced-motion: reduce) { .temabilder img { transition: none; } }
