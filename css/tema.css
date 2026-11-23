@@ -1,0 +1,46 @@
+/* Figma-inspirerte pastellflater. Mobil får meny over innholdet. */
+.temaside { background: #f0e4bd; }
+.temahode { max-width: 1200px; margin: auto; padding: 24px; }
+.temahode p { margin: 6px 0 0; }
+.temaoppsett {
+    display: grid;
+    grid-template-columns: 250px minmax(0, 1fr);
+    align-items: start;
+    gap: 24px;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 24px calc(120px + env(safe-area-inset-bottom, 0px));
+}
+.temameny {
+    position: sticky;
+    top: 20px;
+    display: grid;
+    gap: 8px;
+    padding: 20px;
+    border-radius: 24px;
+    background: #f3f2f7;
+}
+.temameny a { padding: 12px; border-radius: 12px; color: #425563; text-decoration: none; }
+.temameny a:hover, .temameny a:focus-visible { background: #fbd8df; }
+.temaoppsett main { min-width: 0; }
+.temaoppsett h1 { margin-top: 0; }
+.temakort { padding: 28px; margin: 24px 0; border-radius: 24px; background: #fffdf8; scroll-margin-top: 20px; }
+.temakort.bla { background: #e5f3f8; }
+.temakort.rosa { background: #fbe1e6; }
+.temakort h2 { font-size: 28px; }
+.temalabel { color: #425f70; font-size: 14px; font-weight: bold; letter-spacing: 1px; }
+.temakort a { display: inline-block; padding: 8px 0; color: #34566a; text-underline-offset: 3px; overflow-wrap: anywhere; }
+.temalenker { display: grid; gap: 4px; }
+.artikkeloppsett { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.bildeplass { display: grid; place-content: center; padding: 24px; border: 1px dashed #94adb9; border-radius: 16px; text-align: center; background: #f4fafc; }
+.bildeplass span { font-size: 64px; }
+.utkast { padding: 16px; border-radius: 12px; background: #fff7df; }
+@media (max-width: 760px) {
+    .temaoppsett { grid-template-columns: 1fr; padding-left: 20px; padding-right: 20px; }
+    .temameny { position: static; grid-template-columns: repeat(2, minmax(0, 1fr)); padding: 12px; }
+    .temameny a { padding: 10px; }
+    .artikkeloppsett { grid-template-columns: 1fr; }
+    .temakort { padding: 22px; }
+}
+
+.temabilde { display: block; width: 100%; height: auto; align-self: center; border-radius: 20px; }

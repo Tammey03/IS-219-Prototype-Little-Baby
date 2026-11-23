@@ -1,0 +1,144 @@
+/* ===== INNLOGGINGSSIDEN ===== */
+
+/* Inkluderer padding og kantlinjer i elementenes bredde. */
+.innloggingsside,
+.innloggingsside * {
+    box-sizing: border-box;
+}
+
+/* Farger, skrifttype, bakgrunn og plassering av innholdet. */
+.innloggingsside {
+    --bakgrunn: #fbf5ef;
+    --kort: #ffffff;
+    --tekst: #343b37;
+    --dempet-tekst: #647068;
+    --gronn: #dce9de;
+    --gronn-hover: #cbdcce;
+    --fersken: #f8e0d3;
+    --fersken-hover: #f0cfbd;
+
+    margin: 0;
+    min-height: 100vh;
+    min-height: 100svh;
+    display: grid;
+    place-items: center;
+    padding: 32px 20px;
+    background: var(--bakgrunn);
+    color: var(--tekst);
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+}
+
+/* Begrenser bredden og lar innholdet passe på små skjermer. */
+.innloggingsside .innlogging {
+    width: 100%;
+    max-width: 390px;
+}
+
+/* ===== NAVN OG SLAGORD ===== */
+
+.innloggingsside .merkevare {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.innloggingsside .merkevare-navn {
+    margin: 0;
+    font-family: Georgia, serif;
+    font-size: 38px;
+    font-weight: bold;
+}
+
+.innloggingsside .slagord {
+    margin: 8px 0 0;
+    color: var(--dempet-tekst);
+}
+
+/* ===== KORTET RUNDT INNLOGGINGEN ===== */
+
+.innloggingsside .innloggingskort {
+    padding: 30px 24px;
+    border: 1px solid #e8e1da;
+    border-radius: 24px;
+    background: var(--kort);
+    box-shadow: 0 12px 35px rgb(52 59 55 / 6%);
+    text-align: center;
+}
+
+.innloggingsside h1 {
+    margin: 0 0 10px;
+    font-size: 27px;
+}
+
+.innloggingsside .introduksjon {
+    margin: 0 0 26px;
+    color: var(--dempet-tekst);
+}
+
+/* ===== INNLOGGINGSKNAPPER ===== */
+
+/* Plasserer knappene under hverandre. */
+.innloggingsside .brukervalg {
+    display: grid;
+    gap: 14px;
+}
+
+/* Felles utseende for begge knappene. */
+.innloggingsside .innloggingsknapp {
+    width: 100%;
+    min-height: 54px;
+    padding: 14px 18px;
+    border: 0;
+    border-radius: 14px;
+    color: var(--tekst);
+    font: inherit;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 150ms ease;
+}
+
+/* Farge på knappen for mor. */
+.innloggingsside .knapp-mor {
+    background: var(--fersken);
+}
+
+/* Endrer fargen når musepekeren er over knappen. */
+.innloggingsside .knapp-mor:hover {
+    background: var(--fersken-hover);
+}
+
+/* Farge på knappen for far. */
+.innloggingsside .knapp-far {
+    background: var(--gronn);
+}
+
+.innloggingsside .knapp-far:hover {
+    background: var(--gronn-hover);
+}
+
+/* Viser hvilken knapp som er valgt ved bruk av tastatur. */
+.innloggingsside .innloggingsknapp:focus-visible {
+    outline: 3px solid #526f5a;
+    outline-offset: 4px;
+}
+
+/* ===== INFORMASJON OG FEILMELDING ===== */
+
+.innloggingsside .demotekst {
+    margin: 24px 0 0;
+    color: var(--dempet-tekst);
+    font-size: 13px;
+}
+
+.innloggingsside .feilmelding {
+    color: #9b3030;
+    font-size: 14px;
+}
+
+/* Teksten under innloggingskortet. */
+.innloggingsside .bunntekst {
+    margin: 24px 0 0;
+    text-align: center;
+    color: var(--dempet-tekst);
+    font-size: 13px;
+}

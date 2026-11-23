@@ -1,0 +1,57 @@
+/* Felles meny festet nederst i skjermen på alle portalsidene. */
+.bunnmeny {
+    box-sizing: border-box;
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 520px;
+    z-index: 100;
+    display: flex;
+    justify-content: space-around;
+    gap: 8px;
+    padding: 12px 12px calc(12px + env(safe-area-inset-bottom, 0px));
+    border: 1px solid #e8e1da;
+    border-radius: 16px 16px 0 0;
+    background: white;
+    box-shadow: 0 -4px 18px rgb(52 59 55 / 8%);
+}
+
+.bunnmeny a {
+    padding: 10px 6px;
+    color: #647068;
+    text-decoration: none;
+}
+
+.bunnmeny a:focus-visible {
+    outline: 3px solid #526f5a;
+    outline-offset: 3px;
+}
+
+.bunnmeny a[aria-current="page"] {
+    color: #343b37;
+    font-weight: bold;
+}
+
+
+/* PC og nettbrett: fest hovedmenyen øverst. Mobil beholder bunnmenyen. */
+@media (min-width: 768px) {
+    .bunnmeny {
+        top: 0;
+        bottom: auto;
+        max-width: 1200px;
+        padding: calc(12px + env(safe-area-inset-top, 0px)) 12px 12px;
+        border-radius: 0 0 16px 16px;
+        box-shadow: 0 4px 18px rgb(52 59 55 / 8%);
+    }
+    .bunnmeny a { min-width: 120px; text-align: center; }
+
+    /* Plass til den faste toppmenyen på alle sider som bruker menyfilen. */
+    body { padding-top: calc(88px + env(safe-area-inset-top, 0px)); }
+    .portal,
+    .barneside { padding-bottom: 40px; }
+    .temaoppsett { padding-bottom: 40px; }
+    .temameny { top: calc(108px + env(safe-area-inset-top, 0px)); }
+    html { scroll-padding-top: calc(100px + env(safe-area-inset-top, 0px)); }
+}

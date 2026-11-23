@@ -1,0 +1,307 @@
+/* ===== GRUNNLEGGENDE UTSEENDE ===== */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #fbf5ef;
+    color: #343b37;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+}
+
+/* Sørger for at skjulte elementer forblir skjult. */
+[hidden] {
+    display: none !important;
+}
+
+/* Begrenser bredden på større skjermer. */
+.portal {
+    max-width: 520px;
+    margin: 0 auto;
+    padding: 0 20px calc(112px + env(safe-area-inset-bottom, 0px));
+}
+
+/* ===== TOPPFELT ===== */
+
+.toppfelt {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    padding: 24px 0;
+}
+
+.logo {
+    color: #343b37;
+    font-family: Georgia, serif;
+    font-size: 26px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.tekstknapp {
+    min-height: 44px;
+    padding: 8px;
+    border: 0;
+    background: transparent;
+    color: #425d49;
+    font: inherit;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+/* ===== VELKOMST ===== */
+
+.velkomst {
+    padding: 16px 0 24px;
+}
+
+.overtekst {
+    margin: 0;
+    color: #647068;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+h1 {
+    margin: 8px 0;
+    font-size: 30px;
+}
+
+h2 {
+    margin: 0 0 10px;
+    font-size: 21px;
+}
+
+p {
+    margin: 0 0 16px;
+}
+
+/* ===== KORT MED INNHOLD ===== */
+
+.kort {
+    margin-bottom: 20px;
+    padding: 24px;
+    border: 1px solid #e8e1da;
+    border-radius: 22px;
+    background: white;
+}
+
+.hjelpetekst {
+    color: #647068;
+    font-size: 13px;
+}
+
+/* ===== SKJEMA FOR NY OPPGAVE ===== */
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.inndata-rad {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+input[type="text"] {
+    flex: 1 1 150px;
+    width: 100%;
+    min-width: 0;
+    min-height: 46px;
+    padding: 12px;
+    border: 1px solid #bbc5bd;
+    border-radius: 10px;
+    background: white;
+    color: #343b37;
+    font: inherit;
+}
+
+.hovedknapp {
+    min-height: 46px;
+    padding: 12px 16px;
+    border: 0;
+    border-radius: 10px;
+    background: #dce9de;
+    color: #343b37;
+    font: inherit;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.hovedknapp:hover {
+    background: #cbdcce;
+}
+
+/* ===== OPPGAVELISTEN ===== */
+
+.oppgaveliste {
+    margin: 20px 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* Hver oppgave får en egen rad. */
+.oppgaveliste li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 12px 0;
+    border-bottom: 1px solid #eee8e2;
+}
+
+.oppgave {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin: 0;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+/* Gjør avkrysningsboksen lett å trykke på. */
+.oppgave input {
+    flex-shrink: 0;
+    width: 22px;
+    height: 22px;
+    margin: 1px 0 0;
+    accent-color: #526f5a;
+}
+
+.oppgave span {
+    overflow-wrap: anywhere;
+}
+
+/* Ferdige oppgaver vises med gjennomstreking. */
+.oppgave input:checked + span {
+    color: #647068;
+    text-decoration: line-through;
+}
+
+/* Slettekryss til høyre. hidden skjuler det til oppgaven er fullført. */
+.fjernknapp {
+    flex-shrink: 0;
+    display: grid;
+    place-items: center;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    border: 0;
+    border-radius: 10px;
+    background: transparent;
+    color: #873c30;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.fjernknapp:hover {
+    background: #fff2ee;
+}
+
+/* ===== LENKER OG NAVIGASJON ===== */
+
+.sidelenke {
+    color: #425d49;
+    font-weight: bold;
+}
+
+/* Tydelig markering ved navigasjon med tastatur. */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+    outline: 3px solid #526f5a;
+    outline-offset: 3px;
+}
+
+/* ===== FANER, FLERE LISTER OG KALENDERE ===== */
+.visningsvalg {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 24px;
+}
+.visningsvalg button {
+    flex: 1 1 110px;
+    min-height: 44px;
+    padding: 10px;
+    border: 1px solid #bbc5bd;
+    border-radius: 12px;
+    background: white;
+    color: #343b37;
+    font: inherit;
+    cursor: pointer;
+}
+.visningsvalg button[aria-pressed="true"] {
+    background: #dce9de;
+    border-color: #526f5a;
+    font-weight: bold;
+}
+.korttopp {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+h3 {
+    margin: 0;
+    font-size: 20px;
+    overflow-wrap: anywhere;
+}
+.merkelapp {
+    padding: 4px 10px;
+    background: #f0f4ef;
+    border-radius: 20px;
+    font-size: 14px;
+}
+.innholdsskjema {
+    display: grid;
+    gap: 10px;
+    margin: 20px 0 12px;
+}
+.innholdsskjema label { margin: 0; }
+.innholdsskjema input {
+    width: 100%;
+    min-width: 0;
+    min-height: 46px;
+    padding: 10px;
+    border: 1px solid #bbc5bd;
+    border-radius: 10px;
+    background: white;
+    color: #343b37;
+    font: inherit;
+}
+.delingsknapper { display: flex; flex-wrap: wrap; gap: 12px; }
+
+/* ===== NETTBRETT OG PC ===== */
+/* Samme innhold, men bredere flate og kort ved siden av hverandre. */
+@media (min-width: 768px) {
+    .portal {
+        max-width: 1200px;
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+    .toppfelt { padding: 32px 0; }
+    .velkomst { padding: 24px 0 32px; }
+    h1 { font-size: 40px; }
+    .visningsvalg { max-width: 680px; }
+    #oppretting { max-width: 680px; }
+    #samlinger {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        align-items: start;
+        gap: 24px;
+    }
+    #samlinger > .kort { margin-bottom: 0; }
+    #samlinger { margin-bottom: 24px; }
+    .kort { min-width: 0; }
+}

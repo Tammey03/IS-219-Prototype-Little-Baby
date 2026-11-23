@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hjem | Little Baby</title>
+    <!-- Gjenbruk portalens stil, med egne regler for forsiden. -->
+    <link rel="stylesheet" href="../css/min-side.css">
+    <link rel="stylesheet" href="../css/hjem.css">
+    <script src="../js/barn-informasjon.js" defer></script>
+    <script src="../js/hjem.js" defer></script>
+    <link rel="stylesheet" href="../css/navigasjon.css">
+</head>
+<body>
+    <div class="portal">
+        <header class="toppfelt">
+            <a class="logo" href="index.html" aria-label="Little Baby – hjem">Little Baby</a>
+            <a id="konto-lenke" class="tekstknapp" href="innlogging.html">Logg inn</a>
+        </header>
+        <main class="hjem-innhold">
+            <section class="velkomst">
+                <p class="overtekst">EN LITEN STØTTE I HVERDAGEN</p>
+                <h1 id="velkomsttekst">Velkommen til Little Baby</h1>
+                <p>Små tips, felles oversikt og plass til deres hverdag som foreldre.</p>
+                <!-- Lokal illustrasjon, uten eksterne bildetjenester. -->
+                <img class="forsidebilde" src="../assets/images/familie.svg" alt="Illustrasjon av to foreldre sammen med barnet sitt" width="800" height="360">
+            </section>
+
+            <!-- Bruker de samme barna og det samme valget som Barnets side. -->
+            <section class="barn-oversikt" aria-labelledby="barn-tittel">
+                <h2 id="barn-tittel">For barnet ditt</h2>
+                <label for="velg-barn">Velg barn</label>
+                <select id="velg-barn"></select>
+                <p id="barn-oppsummering" class="hjelpetekst"></p>
+                <a class="sidelenke" href="barnets-side.html">Se barnet og legg til flere barn</a>
+            </section>
+
+            <!-- Detaljene åpnes når brukeren ønsker dem, så forsiden blir roligere. -->
+            <details class="alderstips" id="alderstips" hidden>
+                <summary>Se tre tips for barnets alder</summary>
+                <div class="tipsinnhold">
+                    <p id="aldersgruppe" class="aldersmerke"></p>
+                    <div id="alder-informasjon"></div>
+                </div>
+            </details>
+
+            <section class="temaseksjon" aria-labelledby="tema-tittel">
+                <h2 id="tema-tittel">Hva vil du utforske?</h2>
+                <p>Velg et tema. Ta resten når det passer.</p>
+                <div class="temabilder">
+                    <a href="tema.html#sovn"><img src="../assets/images/sovn.svg" alt="" width="800" height="420" loading="lazy"><span>Søvn &amp; rutiner</span></a>
+                    <a href="tema.html#utvikling"><img src="../assets/images/lek.svg" alt="" width="800" height="300" loading="lazy"><span>Lek &amp; utvikling</span></a>
+                    <a href="tema.html#baby"><img src="../assets/images/familie.svg" alt="" width="800" height="360" loading="lazy"><span>Den første tiden</span></a>
+                </div>
+                <a class="alle-temaer" href="tema.html">Se alle temaer</a>
+            </section>
+
+            <section class="foreldreseksjon" aria-labelledby="foreldre-tittel">
+                <h2 id="foreldre-tittel">Dere som foreldre</h2>
+                <p id="foreldre-intro" class="hjelpetekst">Kladd til prototypen: Korte temaforslag som kan utvikles videre. Les mer hos kildene.</p>
+                <div id="foreldretips"></div>
+            </section>
+            <p class="hjelpetekst">Generell informasjon. Helsestasjonen eller fastlegen kan gi råd tilpasset familien. Flere kilder kommer senere.</p>
+            <p id="hjem-melding" role="status"></p>
+        </main>
+        <!-- Hjem erstatter den tidligere profil-lenken. -->
+        <nav class="bunnmeny" aria-label="Hovedmeny">
+            <a href="index.html" aria-current="page">Hjem</a>
+            <a href="min-side.html">Min side</a>
+            <a href="barnets-side.html">Barnet</a>
+        </nav>
+    </div>
+</body>
+</html>

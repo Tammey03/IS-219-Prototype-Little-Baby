@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+    <!-- Sørger for at æ, ø og å vises riktig. -->
+    <meta charset="UTF-8">
+
+    <!-- Tilpasser siden til mobilskjermen. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Innlogging | Little Baby</title>
+
+    <!-- Henter utseendet fra CSS-filen. -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/login.css">
+
+    <!-- Henter JavaScript. defer gjør at HTML leses først. -->
+    <script src="../js/loginJs.js" defer></script>
+</head>
+
+<body class="innloggingsside">
+    <!-- Hovedinnholdet på innloggingssiden. -->
+    <main class="innlogging">
+
+        <!-- Navn og slagord. -->
+        <header class="merkevare">
+            <p class="merkevare-navn">Little Baby</p>
+            <p class="slagord">Litt enklere sammen</p>
+        </header>
+
+        <!-- Kortet med innloggingsknappene. -->
+        <section class="innloggingskort" aria-labelledby="velkommen">
+            <h1 id="velkommen">Velkommen</h1>
+
+            <p class="introduksjon">
+                Hvem vil du logge inn som?
+            </p>
+
+            <!-- data-rolle brukes av JavaScript til å velge bruker. -->
+            <div class="brukervalg">
+                <button
+                    type="button"
+                    class="innloggingsknapp knapp-mor"
+                    data-rolle="mor"
+                >
+                    Logg inn som mor
+                </button>
+
+                <button
+                    type="button"
+                    class="innloggingsknapp knapp-far"
+                    data-rolle="far"
+                >
+                    Logg inn som far
+                </button>
+            </div>
+
+            <!-- Forklarer at innloggingen er en demonstrasjon. -->
+            <p class="demotekst">
+                Dette er en prototype med eksempelbrukere.
+                Ingen passord eller personopplysninger kreves.
+            </p>
+
+            <!-- Fylles med tekst hvis innloggingen feiler. -->
+            <p
+                id="feilmelding"
+                class="feilmelding"
+                role="alert"
+                hidden
+            ></p>
+
+            <!-- Vises dersom JavaScript er slått av. -->
+            <noscript>
+                <p>Aktiver JavaScript for å prøve innloggingen.</p>
+            </noscript>
+        </section>
+
+        <!-- Tekst nederst på siden. -->
+        <footer class="bunntekst">
+            Din hverdag. Deres lille.
+        </footer>
+    </main>
+</body>
+</html>
