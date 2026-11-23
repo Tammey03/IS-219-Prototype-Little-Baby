@@ -15,7 +15,7 @@ const foreldretips = [
     },
     {
         tittel: "Trygghet og nærhet", kilde: "Bufdir",
-        tekst: "Kladd: Sett av små stunder til kontakt og samspill. Her kommer flere tips om å møte barnets behov.",
+        tekst: "Kladdtips: Små stunder med prat, lek og nærhet kan være en fin måte å bli kjent med barnet på. Legg merke til hva barnet viser interesse for, og gi rom for pauser. Dere kan finne hver deres måte å ha kontakt med barnet på og dele erfaringene med hverandre. Det handler ikke om å gjøre alt perfekt, men om å være til stede og bli kjent over tid.",
         lenke: "https://www.bufdir.no/foreldrehverdag/"
     },
     {
@@ -60,7 +60,7 @@ const foreldretips = [
     },
     {
         tittel: "Et lag i hverdagen", kilde: "Bufdir",
-        tekst: "Kladd: Snakk om hva hver av dere trenger, og hvordan dere vil fordele omsorg og praktiske oppgaver. Rollene trenger ikke være faste.",
+        tekst: "Kladdtips: Snakk om hva hver av dere trenger, og hvordan dere vil fordele omsorg og praktiske oppgaver. Avtal gjerne hvem som følger opp en oppgave helt fra planlegging til gjennomføring. Bruk listene og kalenderne på Min side til det dere ønsker å dele. Gjør plass til at begge kan få pauser, og juster avtalene når behovene endrer seg. Rollene trenger ikke være faste, og dere trenger ikke gjøre ting helt likt.",
         lenke: "https://www.bufdir.no/foreldrehverdag/"
     }
 ];
